@@ -6,8 +6,19 @@
     <meta name="theme-color" content="#f3f0ff" />
     <meta name="description" content="ArtFlowers Webshop — оптовый каталог цветов, растений и фурнитуры. Попробуйте, как он работает." />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script>
+      /* Первая страница начинает грузиться сразу, не дожидаясь остального */
+      (function () {
+        var l = document.createElement("link");
+        l.rel = "preload"; l.as = "image"; l.fetchPriority = "high";
+        var q = /[?&]lang=(ru|en)/.exec(location.search), saved = null;
+        try { saved = localStorage.getItem("af-demo-lang"); } catch (e) {}
+        l.href = "./screens/home-" + ((q ? q[1] : saved) === "en" ? "en" : "ru") + "@s.webp";
+        document.head.appendChild(l);
+      })();
+    </script>
     <title>ArtFlowers Webshop — как это работает</title>
-    <script type="module" crossorigin src="./assets/index-BHXQIqwO.js"></script>
+    <script type="module" crossorigin src="./assets/index-D7P-s6mB.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-gn0GecvE.css">
   </head>
   <body>

@@ -18,10 +18,17 @@
       })();
     </script>
     <title>ArtFlowers Webshop — как это работает</title>
-    <script type="module" crossorigin src="./assets/index-CFzLoB-R.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DLSbP7Ga.css">
+    <script type="module" crossorigin src="./assets/index-B0g3N8A5.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-76uVbFMv.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Пока грузится презентация, экран не пустой: логотип и полоса загрузки. Содержимое заменяется при запуске -->
+      <div style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#f3f0ff">
+        <img src="./logo.svg" alt="ArtFlowers" width="191" height="40" />
+        <div style="width:160px;height:4px;border-radius:4px;background:#dcd6f7;overflow:hidden"><div style="width:40%;height:100%;border-radius:4px;background:#3a4fe0;animation:af-load 1.1s ease-in-out infinite"></div></div>
+      </div>
+      <style>@keyframes af-load{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}</style>
+    </div>
   </body>
 </html>
